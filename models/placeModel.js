@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    const Place = sequelize.define('image', {
+    const Place = sequelize.define('place', {
         Name: {
             type: DataTypes.STRING
         },
