@@ -6,7 +6,7 @@ const router = require('express').Router()
 
 // use routers
 
-router.post('/addImage', imageController.upload, imageController.test);
+router.post('/addImage', imageController.upload, imageController.addImage);
 router.get('/images', imageController.allImage)
 
 module.exports = router

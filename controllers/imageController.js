@@ -42,9 +42,9 @@ const upload = multer({
 }).single('image')
 
 
-// test
+// Add image to table
 
-const test = async (req, res) => {
+const addImage = async (req, res) => {
   let data = {
     image: req.file.path
   }
@@ -56,5 +56,5 @@ const test = async (req, res) => {
 module.exports = {
     upload,
     allImage,
-    test
+    addImage
 }
