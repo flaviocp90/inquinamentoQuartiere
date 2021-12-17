@@ -52,9 +52,18 @@ const addImage = async (req, res) => {
   res.status(200).send(image)
 }
 
+// delete image
+
+const deleteImage = async (req, res) => {
+  let id = req.params.id
+  await Image.destroy({ where: { id: id } })
+  res.status(200).send('Image is deleted') 
+}
+
 
 module.exports = {
     upload,
     allImage,
-    addImage
+    addImage,
+    deleteImage
 }
