@@ -46,7 +46,8 @@ const upload = multer({
 
 const addImage = async (req, res) => {
   let data = {
-    image: req.file.path
+    image: req.file.path,
+    place_id: req.params.id
   }
   const image = await Image.create(data)
   res.status(200).send(image)

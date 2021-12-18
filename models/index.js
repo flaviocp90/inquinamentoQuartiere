@@ -40,4 +40,15 @@ db.sequelize.sync({ force: false })
     console.log('re-sync done')
 })
 
+// one to many relation
+db.place.hasMany(db.image, {
+    foreignKey: 'place_id',
+    as: 'image'
+})
+
+db.image.belongsTo(db.place, {
+    foreignKey: 'place_id',
+    as: 'place'
+})
+
 module.exports = db
